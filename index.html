@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b61">
+  <meta name="description" content="5 Pães — fé, partilha e esperança. Uma mensagem inspirada no milagre da multiplicação dos pães e dos peixes.">
+  <title>5 Pães | Fé • Partilha • Esperança</title>
+  <style>
+    :root { --navy:#073b61; --blue:#075b8e; --gold:#f2b323; --cream:#fff8ec; --ink:#10385c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family: Georgia, 'Times New Roman', serif; color:var(--ink); background:var(--cream); }
+    header { background:linear-gradient(115deg,#042b49,var(--navy)); color:white; padding:16px 6vw; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:clamp(1.65rem,4vw,2.4rem); font-weight:bold; letter-spacing:.04em; }
+    .fish { color:var(--gold); font-family:Arial,sans-serif; font-size:2.5rem; line-height:1; }
+    nav a { color:white; text-decoration:none; margin-left:22px; font:500 1rem Arial,sans-serif; }
+    nav a:hover { color:var(--gold); }
+    .hero { min-height:68vh; padding:70px 20px 64px; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden; background:radial-gradient(ellipse at 50% 10%,#fff 0%,#fff8ec 45%,#f5d7a0 100%); }
+    .hero:before { content:""; position:absolute; width: min(650px,90vw); height:min(650px,90vw); border:2px solid rgba(242,179,35,.3); border-radius:50%; top:-350px; }
+    .hero-content { max-width:850px; position:relative; }
+    .emblem { margin:0 auto 10px; width:150px; height:110px; position:relative; display:grid; place-items:center; }
+    .sun { position:absolute; inset:0 8px 0; border:9px solid var(--gold); border-bottom-color:transparent; border-radius:100px 100px 0 0; }
+    .loaves { position:absolute; top:32px; display:flex; gap:8px; align-items:center; }
+    .loaf { width:43px; height:31px; border-radius:55% 55% 35% 35%; background:linear-gradient(#e9a84d,#a95b21); border:2px solid #99521d; transform:rotate(-8deg); box-shadow:inset 0 5px 0 #f7cc7d; }
+    .loaf:nth-child(2) { transform:rotate(8deg); }
+    .loaf:nth-child(3) { transform:translateY(12px); }
+    h1 { margin:10px 0 8px; font-size:clamp(3.6rem,11vw,7.2rem); line-height:.95; letter-spacing:-.05em; color:var(--navy); }
+    .tagline { color:#9a6810; font:700 .95rem Arial,sans-serif; letter-spacing:.28em; text-transform:uppercase; }
+    .intro { font-size:clamp(1.15rem,2.5vw,1.45rem); line-height:1.75; margin:34px auto 12px; max-width:760px; }
+    .reference { font:700 .9rem Arial,sans-serif; letter-spacing:.16em; color:var(--blue); }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:12px; margin-top:30px; padding:18px 30px; border:3px solid var(--gold); border-radius:999px; background:linear-gradient(120deg,#06436d,#0875ad); color:white; text-decoration:none; font:700 1rem Arial,sans-serif; box-shadow:0 9px 25px #073b6126; transition:transform .2s,box-shadow .2s; }
+    .button:hover { transform:translateY(-3px); box-shadow:0 13px 28px #073b6133; }
+    .arrow { color:var(--gold); font-size:1.4rem; }
+    section.message { padding:55px 20px 62px; text-align:center; background:white; }
+    section.message h2 { font-size:clamp(1.8rem,5vw,2.7rem); margin:0 0 16px; color:var(--navy); }
+    section.message p { max-width:760px; margin:0 auto; font-size:1.15rem; line-height:1.8; }
+    .verse { max-width:740px; margin:26px auto 0; padding:22px; border-left:4px solid var(--gold); background:#fff8ec; font-size:1.2rem; line-height:1.7; font-style:italic; }
+
+    .donation { padding:54px 20px; background:linear-gradient(125deg,#042b49,#075b8e); color:white; }
+    .donation-inner { max-width:980px; margin:auto; display:flex; align-items:center; justify-content:center; gap:28px; text-align:left; }
+    .donation-heart { flex:0 0 auto; color:#f2b323; font:normal 7rem/1 Arial,sans-serif; }
+    .donation-copy { max-width:650px; }
+    .donation-kicker { margin:0 0 6px; color:#ffd36a; font:700 .85rem Arial,sans-serif; text-transform:uppercase; letter-spacing:.16em; }
+    .donation h2 { margin:0 0 12px; color:white; font-size:clamp(2rem,5vw,3rem); }
+    .donation-copy > p:not(.donation-kicker):not(.donation-note) { font-size:1.08rem; line-height:1.65; }
+    .pix-box { display:inline-flex; flex-direction:column; gap:6px; margin:12px 0 16px; padding:13px 18px; border:1px solid #f2b323; border-radius:12px; background:#ffffff10; }
+    .pix-box span { color:#ffd36a; font:700 .8rem Arial,sans-serif; letter-spacing:.12em; }
+    .pix-box strong { font:700 clamp(1.2rem,4vw,1.7rem) Arial,sans-serif; letter-spacing:.03em; }
+    .donation-button { display:inline-flex; align-items:center; gap:14px; margin-left:8px; padding:15px 22px; border-radius:999px; background:#f2b323; color:#073b61; text-decoration:none; font:700 1rem Arial,sans-serif; }
+    .donation-button:hover { background:#ffd36a; }
+    .donation-note { max-width:570px; color:#dbeaf4; font: .84rem/1.55 Arial,sans-serif; }
+    @media(max-width:620px) { .donation-inner { flex-direction:column; text-align:center; gap:10px; } .donation-heart { font-size:4.5rem; } .donation-button { margin:8px 0; } }
+
+    footer { background:#042b49; color:#eaf3f8; padding:24px 16px; text-align:center; font: .9rem Arial,sans-serif; }
+    footer span { color:var(--gold); }
+    @media(max-width:620px) { header { flex-direction:column; } nav a { margin:0 8px; font-size:.9rem; } .hero { padding-top:52px; } .button { padding:16px 22px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="fish" aria-hidden="true">♧</span><span>5 PÃES</span></div>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#mensagem">Mensagem</a><a href="#blog">Blog</a><a href="#doacoes">Doações</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="emblem" aria-hidden="true"><div class="sun"></div><div class="loaves"><i class="loaf"></i><i class="loaf"></i><i class="loaf"></i></div></div>
+        <h1>5 PÃES</h1>
+        <div class="tagline">Fé <span>•</span> Partilha <span>•</span> Esperança</div>
+        <p class="intro">Uma pequena oferta, colocada nas mãos de Jesus, pode se transformar em uma grande bênção. Que esta mensagem inspire generosidade, confiança e amor ao próximo.</p>
+        <div class="reference">JOÃO 6:1–13</div>
+        <a class="button" id="blog" href="http://5paes.blogspot.com/" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">↗</span><span>VISITE NOSSO BLOG</span><span class="arrow" aria-hidden="true">➜</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="message" id="mensagem">
+      <h2>O milagre da partilha</h2>
+      <p>Na passagem de João 6:1–13, Jesus recebe cinco pães e dois peixinhos, dá graças e os distribui à multidão. Todos comem até ficarem satisfeitos, e ainda são recolhidos cestos com o que sobrou.</p>
+      <div class="verse">“Então Jesus tomou os cinco pães e os dois peixinhos...”<br><strong>João 6:11–13 — NTLH</strong></div>
+      <p style="margin-top:24px">Que nunca nos faltem fé para confiar, mãos dispostas a repartir e esperança para acreditar que Deus pode fazer muito com aquilo que oferecemos com amor.</p>
+      <a class="button" href="http://5paes.blogspot.com/" target="_blank" rel="noopener noreferrer">Conheça o blog <span class="arrow">➜</span></a>
+    </section>
+  </main>
+
+    <section class="donation" id="doacoes" aria-labelledby="donation-title">
+      <div class="donation-inner">
+        <div class="donation-heart" aria-hidden="true">♡</div>
+        <div class="donation-copy">
+          <p class="donation-kicker">Sua ajuda faz a diferença</p>
+          <h2 id="donation-title">Faça sua doação</h2>
+          <p>Contribua com amor e ajude esta mensagem de fé e esperança a continuar alcançando pessoas.</p>
+          <div class="pix-box"><span>PIX (telefone)</span><strong>013 97826-7986</strong></div>
+          <a class="donation-button" href="tel:+5513978267986">Doar pelo telefone <span aria-hidden="true">➜</span></a>
+          <p class="donation-note">Para doar via PIX, use o número acima no aplicativo do seu banco e confira os dados do destinatário antes de confirmar.</p>
+        </div>
+      </div>
+    </section>
+
+  <footer>© <span>5 PÃES</span> • Fé, partilha e esperança. | Doações via PIX: <strong>013 97826-7986</strong></footer>
+</body>
+</html>
