@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f0df">
+  <meta name="description" content="5 Pães — uma mensagem de fé, partilha e esperança inspirada na parábola dos cinco pães e dois peixinhos.">
+  <title>5 Pães — Fé que se multiplica</title>
+  <style>
+    :root { --cream:#f7f0df; --paper:#fffdf7; --navy:#173b4b; --blue:#2d6875; --gold:#d9a441; --ink:#26343a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:Georgia, 'Times New Roman', serif; background:var(--cream); }
+    .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:42px 20px 54px; text-align:center; overflow:hidden; position:relative; }
+    .hero:before,.hero:after { content:""; position:absolute; width:260px; height:260px; border:1px solid rgba(217,164,65,.25); border-radius:50%; z-index:0; }
+    .hero:before { top:-145px; left:-100px; } .hero:after { bottom:-170px; right:-100px; }
+    .content { width:min(100%,760px); position:relative; z-index:1; }
+    .logo { width:min(330px,78vw); height:auto; display:block; margin:0 auto 18px; filter:drop-shadow(0 10px 12px rgba(23,59,75,.10)); }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.22em; font:700 12px/1.5 Arial,sans-serif; margin:8px 0 12px; }
+    h1 { color:var(--navy); font-size:clamp(2.1rem,6vw,3.5rem); line-height:1.08; margin:0 0 15px; }
+    .intro { max-width:620px; margin:0 auto 30px; font-size:clamp(1.05rem,2.5vw,1.25rem); line-height:1.7; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:66px; padding:18px 34px; border-radius:12px; background:var(--navy); color:white; text-decoration:none; font:700 17px Arial,sans-serif; box-shadow:0 9px 0 #0d2935,0 15px 25px rgba(23,59,75,.18); transition:transform .18s,box-shadow .18s; }
+    .button:hover { transform:translateY(3px); box-shadow:0 6px 0 #0d2935,0 11px 20px rgba(23,59,75,.18); }
+    .button:focus-visible,.contact a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .verse { margin:42px auto 0; max-width:610px; padding:22px 25px; background:rgba(255,253,247,.78); border:1px solid rgba(217,164,65,.45); border-radius:16px; }
+    .verse p { margin:0; font-size:1.1rem; line-height:1.7; color:var(--navy); }
+    .verse small { display:block; margin-top:10px; font:700 11px Arial,sans-serif; color:#8b6a2d; letter-spacing:.12em; text-transform:uppercase; }
+    footer { background:var(--navy); color:#f7f0df; text-align:center; padding:25px 18px 28px; font:14px/1.8 Arial,sans-serif; }
+    footer strong { color:#f1c56e; }
+    .contact a { color:#fff; font-weight:700; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.5); }
+    @media (max-width:480px) { .button { width:100%; padding:17px 18px; font-size:15px; } .verse { margin-top:32px; padding:19px; } }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <div class="content">
+      <svg class="logo" viewBox="0 0 420 340" role="img" aria-labelledby="logoTitle logoDesc" xmlns="http://www.w3.org/2000/svg">
+        <title id="logoTitle">Logo 5 Pães e dois peixinhos</title>
+        <desc id="logoDesc">Cinco pães dourados e dois peixes azuis sob raios de luz.</desc>
+        <defs>
+          <linearGradient id="bread" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f6d88c"/><stop offset="1" stop-color="#c8872d"/></linearGradient>
+          <linearGradient id="fish" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5a9da5"/><stop offset="1" stop-color="#1c5367"/></linearGradient>
+        </defs>
+        <g stroke="#d9a441" stroke-width="3" stroke-linecap="round" opacity=".8">
+          <path d="M210 16V48M145 30l14 27M275 30l-14 27M93 73l27 14M327 73l-27 14"/>
+        </g>
+        <g fill="url(#bread)" stroke="#a86d28" stroke-width="3">
+          <path d="M91 145c-5-25 15-43 39-39 13-25 52-21 59 7 21 4 29 30 15 47H104c-7-3-11-8-13-15z"/>
+          <path d="M215 110c-4-22 14-37 34-34 12-22 45-19 51 6 18 4 25 26 16 41H227c-6-2-10-6-12-13z"/>
+          <path d="M151 191c-4-22 13-37 34-34 11-22 45-19 51 6 18 4 25 26 16 41H163c-6-2-10-6-12-13z"/>
+          <path d="M48 205c-4-19 12-33 30-30 10-20 40-17 45 5 16 3 22 23 14 36H59c-5-2-9-5-11-11z"/>
+          <path d="M272 203c-4-19 12-33 30-30 10-20 40-17 45 5 16 3 22 23 14 36H283c-5-2-9-5-11-11z"/>
+        </g>
+        <g fill="none" stroke="#fff0c5" stroke-width="4" stroke-linecap="round">
+          <path d="M122 123l13-8M151 117l10 7M245 98l12-7M181 178l12-8M76 201l10-7M302 199l10-7"/>
+        </g>
+        <g fill="url(#fish)" stroke="#174557" stroke-width="3">
+          <path d="M112 260c24-25 61-25 86 0-25 25-62 25-86 0zm0 0-25-18v36z"/>
+          <path d="M222 260c24-25 61-25 86 0-25 25-62 25-86 0zm86 0 25-18v36z"/>
+        </g>
+        <g fill="#fff"><circle cx="169" cy="255" r="4"/><circle cx="251" cy="255" r="4"/></g>
+        <g fill="#173b4b" font-family="Georgia,serif" text-anchor="middle">
+          <text x="210" y="318" font-size="37" font-weight="bold" letter-spacing="5">5 PÃES</text>
+          <text x="210" y="336" font-size="9" letter-spacing="3">E DOIS PEIXINHOS</text>
+        </g>
+      </svg>
+      <p class="eyebrow">Fé • Partilha • Esperança</p>
+      <h1>O pouco, nas mãos de Deus, pode se multiplicar.</h1>
+      <p class="intro">Uma mensagem de amor e generosidade inspirada na parábola dos cinco pães e dois peixinhos. Conheça nosso espaço e faça parte dessa corrente de fé.</p>
+      <a class="button" href="https://5paes.blogspot.com/" target="_blank" rel="noopener noreferrer">
+        Conheça o projeto <span aria-hidden="true">➜</span>
+      </a>
+      <section class="verse" aria-label="Mensagem bíblica">
+        <p>“Todos comeram e ficaram satisfeitos.”</p>
+        <small>Mateus 14:20</small>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div><strong>Entre em contato</strong></div>
+    <div class="contact">Telefone / WhatsApp: <a href="https://wa.me/5513978267986" target="_blank" rel="noopener noreferrer">(13) 97826-7986</a></div>
+    <div>5 Pães — Que a partilha multiplique a esperança.</div>
+  </footer>
+</body>
+</html>
